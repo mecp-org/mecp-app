@@ -7,7 +7,7 @@
         "./src/*"
       ],
       "@mecp/engine": [
-        "./vendor/mecp/engine/src/index"
+        "./engine/src/index"
       ]
     }
   },
@@ -17,6 +17,7 @@
   ],
   "exclude": [
     "node_modules",
-    "vendor"
+    "vendor",
+    "engine/tests"
   ]
 }

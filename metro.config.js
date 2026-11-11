@@ -2,20 +2,20 @@ const { getDefaultConfig } = require('expo/metro-config');
 const path = require('path');
 
 const projectRoot = __dirname;
-const protocolRoot = path.resolve(projectRoot, 'vendor', 'mecp');
+const engineSrc = path.resolve(projectRoot, 'engine', 'src');
+const languagesRoot = path.resolve(projectRoot, 'vendor', 'mecp', 'languages');
 
 const config = getDefaultConfig(projectRoot);
 
-// Watch the MECP protocol submodule for engine/ and languages/ changes
-config.watchFolders = [protocolRoot];
+// Watch local engine + protocol language packs (submodule)
+config.watchFolders = [engineSrc, languagesRoot];
 
 config.resolver.nodeModulesPaths = [
   path.resolve(projectRoot, 'node_modules'),
 ];
 
-// Resolve @mecp/engine to TypeScript source in the submodule
 config.resolver.extraNodeModules = {
-  '@mecp/engine': path.resolve(protocolRoot, 'engine', 'src'),
+  '@mecp/engine': engineSrc,
 };
 
 module.exports = config;
