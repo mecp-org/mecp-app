@@ -1,0 +1,3 @@
+[submodule "vendor/mecp"]
+	path = vendor/mecp
+	url = https://github.com/mecp-org/MECP.git

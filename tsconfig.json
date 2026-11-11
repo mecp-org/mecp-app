@@ -7,7 +7,7 @@
         "./src/*"
       ],
       "@mecp/engine": [
-        "../engine/src/index"
+        "./vendor/mecp/engine/src/index"
       ]
     }
   },

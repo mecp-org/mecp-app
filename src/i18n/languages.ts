@@ -4,26 +4,26 @@
  */
 import type { LanguageFile } from '@mecp/engine';
 
-import cs from '../../../languages/cs.json';
-import de from '../../../languages/de.json';
-import en from '../../../languages/en.json';
-import es from '../../../languages/es.json';
-import fa from '../../../languages/fa.json';
-import fr from '../../../languages/fr.json';
-import it from '../../../languages/it.json';
-import ja from '../../../languages/ja.json';
-import nl from '../../../languages/nl.json';
-import no from '../../../languages/no.json';
-import pl from '../../../languages/pl.json';
-import pt from '../../../languages/pt.json';
-import ru from '../../../languages/ru.json';
-import sk from '../../../languages/sk.json';
-import sr from '../../../languages/sr.json';
-import sv from '../../../languages/sv.json';
-import tr from '../../../languages/tr.json';
-import uk from '../../../languages/uk.json';
-import zhCn from '../../../languages/zh-cn.json';
-import zhTw from '../../../languages/zh-tw.json';
+import cs from '../../vendor/mecp/languages/cs.json';
+import de from '../../vendor/mecp/languages/de.json';
+import en from '../../vendor/mecp/languages/en.json';
+import es from '../../vendor/mecp/languages/es.json';
+import fa from '../../vendor/mecp/languages/fa.json';
+import fr from '../../vendor/mecp/languages/fr.json';
+import it from '../../vendor/mecp/languages/it.json';
+import ja from '../../vendor/mecp/languages/ja.json';
+import nl from '../../vendor/mecp/languages/nl.json';
+import no from '../../vendor/mecp/languages/no.json';
+import pl from '../../vendor/mecp/languages/pl.json';
+import pt from '../../vendor/mecp/languages/pt.json';
+import ru from '../../vendor/mecp/languages/ru.json';
+import sk from '../../vendor/mecp/languages/sk.json';
+import sr from '../../vendor/mecp/languages/sr.json';
+import sv from '../../vendor/mecp/languages/sv.json';
+import tr from '../../vendor/mecp/languages/tr.json';
+import uk from '../../vendor/mecp/languages/uk.json';
+import zhCn from '../../vendor/mecp/languages/zh-cn.json';
+import zhTw from '../../vendor/mecp/languages/zh-tw.json';
 
 const LANGUAGES: Record<string, LanguageFile> = {
   cs: cs as unknown as LanguageFile,
