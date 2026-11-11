@@ -6,7 +6,7 @@ Implementations and clients for the [Mesh Emergency Communication Protocol (MECP
 |------|------|
 | Expo / React Native app (this repo root) | Meshtastic AIDL compose / inbox client |
 | [`engine/`](engine/) | TypeScript encoder/decoder (`@mecp/engine`) |
-| [`web/`](web/) | Offline PWA compose/decode tool |
+| [`web/`](web/) | Offline PWA compose/decode tool ([live](https://mecp-org.github.io/mecp-app/)) |
 | [`examples/`](examples/) | Python, Arduino, and shell references |
 | [`docs/MECP_Design_Plan.md`](docs/MECP_Design_Plan.md) | Product / app design plan |
 
@@ -49,7 +49,9 @@ npm run test:engine
 
 ## Web tool
 
-Open `web/index.html` in a browser (no build step). GitHub Pages deploys from `web/` on this repo.
+**Live:** [https://mecp-org.github.io/mecp-app/](https://mecp-org.github.io/mecp-app/)
+
+Or open `web/index.html` locally in a browser (no build step). GitHub Pages deploys from `web/` on this repo.
 
 ## Examples
 
