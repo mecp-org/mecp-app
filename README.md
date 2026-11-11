@@ -1,8 +1,16 @@
 # mecp-app
 
-React Native / Expo client for the [Mesh Emergency Communication Protocol (MECP)](https://github.com/mecp-org/MECP).
+Implementations and clients for the [Mesh Emergency Communication Protocol (MECP)](https://github.com/mecp-org/MECP).
 
-Pairs with Meshtastic (Android AIDL) to compose, send, receive, and decode structured emergency messages across 20 languages.
+| Path | What |
+|------|------|
+| Expo / React Native app (this repo root) | Meshtastic AIDL compose / inbox client |
+| [`engine/`](engine/) | TypeScript encoder/decoder (`@mecp/engine`) |
+| [`web/`](web/) | Offline PWA compose/decode tool |
+| [`examples/`](examples/) | Python, Arduino, and shell references |
+| [`docs/MECP_Design_Plan.md`](docs/MECP_Design_Plan.md) | Product / app design plan |
+
+Protocol specification and language packs live in **[mecp-org/MECP](https://github.com/mecp-org/MECP)** and are pulled in via the `vendor/mecp` submodule (languages only).
 
 ## Clone
 
@@ -17,27 +25,40 @@ If you already cloned without submodules:
 git submodule update --init --recursive
 ```
 
-The protocol engine and language packs live in the [`vendor/mecp`](https://github.com/mecp-org/MECP) submodule (not vendored copies). Update them with:
+Update language packs:
 
 ```bash
 git submodule update --remote vendor/mecp
 ```
 
-## Setup
+## Setup (Expo app)
 
 ```bash
-# Submodule must be present before install (file: dependency on @mecp/engine)
 git submodule update --init --recursive
 npm install
 npm start
 ```
 
+## Engine
+
+```bash
+cd engine && npm ci && npm test
+# or from repo root:
+npm run test:engine
+```
+
+## Web tool
+
+Open `web/index.html` in a browser (no build step). GitHub Pages deploys from `web/` on this repo.
+
+## Examples
+
+See `examples/python`, `examples/arduino`, and `examples/shell`.
+
 ## Licenses
 
 | Component | License |
 |-----------|---------|
-| This app | [GPLv3](LICENSE) |
-| Protocol specification (in submodule) | CC0 1.0 |
-| Language files (in submodule) | CC BY 4.0 |
-
-Protocol and translations are maintained in [mecp-org/MECP](https://github.com/mecp-org/MECP).
+| App, engine, web, examples | [GPLv3](LICENSE) |
+| Protocol specification (MECP repo) | CC0 1.0 |
+| Language files (MECP submodule) | CC BY 4.0 |

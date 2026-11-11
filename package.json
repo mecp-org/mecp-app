@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "private": true,
   "main": "expo-router/entry",
+  "workspaces": [
+    "engine"
+  ],
   "scripts": {
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
     "prebuild": "expo prebuild",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "test:engine": "npm test -w @mecp/engine"
   },
   "dependencies": {
-    "@mecp/engine": "file:./vendor/mecp/engine",
+    "@mecp/engine": "file:./engine",
     "@react-native-async-storage/async-storage": "^3.0.1",
     "expo": "~52.0.0",
     "expo-constants": "~17.0.0",

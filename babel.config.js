@@ -8,7 +8,7 @@ module.exports = function (api) {
         {
           alias: {
             '@': './src',
-            '@mecp/engine': './vendor/mecp/engine/src/index',
+            '@mecp/engine': './engine/src/index',
           },
         },
       ],
